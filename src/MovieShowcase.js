@@ -5,15 +5,12 @@ import movieData from './data.js'
 export default class MovieShowcase extends Component {
 
   generateMovieCards = () => {
-    movieData.map((data) =>
-
+    return movieData.map((data) =>
+    <li>
+      <MovieCard title={data.title} IMDBRating={data.IMDBRating} genres={data.genres} poster={data.poster}/>
+    </li>
     )
   }
-
-  const numbers = [1, 2, 3, 4, 5];
-const listItems = numbers.map((number) =>
-  <li>{number}</li>
-);
 
   render() {
     return (
